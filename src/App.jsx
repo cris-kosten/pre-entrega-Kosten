@@ -1,17 +1,43 @@
 // import BurguerButton from "./components/layout/navbar/BurguerButton";
-import Navbar from "./components/layout/navbar/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Layaut } from "./components/layout/Layaut";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import CartContainer from "./components/pages/cart/CartContainer";
+import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
+
+
+
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      {/* <BurguerButton /> */}
-      <ItemListContainer
-        gretting={"Bienvenido a la Pagina Oficial de Volkswagen"}
-      />
-    </>
-  );
+  return <BrowserRouter >
+    <Routes >
+
+      <Route element={<Layaut />} >
+
+        <Route path="/" element={<ItemListContainer />} />
+
+        <Route path="/category/:category" element={<ItemListContainer />} />
+        {/* <Route path="/category/camioneta" element={<ItemListContainer />} />
+        <Route path="/category/camiones" element={<ItemListContainer />} /> */}
+
+//con los :: y luego el ID trabajamos con un parametro dinamico .. navegando ah lo solicitado x el usuario
+        <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+
+        <Route path="/cart" element={<CartContainer />} />
+
+        <Route path="*" element={<h3>Error 404</h3>} />
+
+      </Route>
+      //ruta principal
+
+
+    </Routes>
+
+
+  </BrowserRouter>
+
+
+
 }
 
 export default App;
