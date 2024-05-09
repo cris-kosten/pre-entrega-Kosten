@@ -12,7 +12,7 @@ import { useEffect, useState } from "react"
 const ItemDetailContainer = () => {
 
     const { id } = useParams()
-    console.log(id)
+
 
     const [item, setItem] = useState({})
     useEffect(() => {
@@ -27,13 +27,17 @@ const ItemDetailContainer = () => {
 
     }, [id])
 
-    console.log(item)
+    const onAdd = (cantidad) => {
+        //agregar al carrito
+        // console.log(item)
+        // console.log(cantidad)
 
+        let objetoCompleto = { ...item, quantity: cantidad }
+        //agregamos al carrito
+        console.log(objetoCompleto)
+    }
 
-
-    return <ItemDetail item={item} />;
-
-
+    return <ItemDetail item={item} onAdd={onAdd} />;
 }
 
 export default ItemDetailContainer

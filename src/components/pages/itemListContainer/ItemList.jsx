@@ -16,19 +16,16 @@ const ItemList = ({ items, error }) => {
 
         <Grid container style={{ display: "flex", justifyContent: "space-evenly", padding: "25px", marginBottom: "50px" }}>
             {
-                items.map(({ id, modelo, motor, potencia, transmision, airbags, img }) => {// metodo colvac - usar el singular del plural del arreglo que estamos mapeando
+                items.map(({ id, nombre, precio, cristal, stock, img }) => {// metodo colvac - usar el singular del plural del arreglo que estamos mapeando
                     return (
 
                         <Grid key={id} item>
-
                             <ProductCard
                                 // key={id}
-
-                                modelo={modelo}
-                                motor={motor}
-                                potencia={potencia}
-                                transmision={transmision}
-                                airbags={airbags}
+                                nombre={nombre}
+                                cristal={cristal}
+                                precio={precio}
+                                stock={stock}
                                 img={img}
                                 id={id}
                             />

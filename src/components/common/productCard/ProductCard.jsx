@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 //     // desestructuramos con props 
 //     const { modelo, motor, potencia, transmision, airbags, img } = props
 
-const ProductCard = ({ id, modelo, motor, potencia, transmision, airbags, img }) => {
+const ProductCard = ({ id, nombre, precio, cristal, stock, img }) => {
 
     return (
         <Card sx={{ maxWidth: 345 }}>
@@ -24,19 +24,16 @@ const ProductCard = ({ id, modelo, motor, potencia, transmision, airbags, img })
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {modelo}
+                        {nombre}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
-                        Motor:  {motor}
+                        Precio: {precio}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
-                        Potencia: {potencia}
+                        Cristal: {cristal}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
-                        Transmision: {transmision}
-                    </Typography>
-                    <Typography variant="h6" color="text.secondary">
-                        Airbags: {airbags}
+                        Stock: {stock}
                     </Typography>
                 </CardContent>
             </CardActionArea>

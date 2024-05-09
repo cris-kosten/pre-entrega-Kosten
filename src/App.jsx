@@ -4,6 +4,8 @@ import { Layaut } from "./components/layout/Layaut";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 import CartContainer from "./components/pages/cart/CartContainer";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
+import Checkout from "./components/pages/checkout/Checkout";
+
 
 
 
@@ -24,7 +26,7 @@ function App() {
         <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
 
         <Route path="/cart" element={<CartContainer />} />
-
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<h3>Error 404</h3>} />
 
       </Route>

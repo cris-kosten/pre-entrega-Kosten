@@ -7,7 +7,11 @@ export const Layaut = () => {
     return (
         <div>
             <Navbar />
-            <Outlet />
+
+            <div style={{ minHeight: "calc(100vh - 150px)" }}>
+                <Outlet />
+            </div>
+
             <Footer />
         </div>
     )
