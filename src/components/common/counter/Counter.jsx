@@ -1,14 +1,15 @@
+import { Button } from "@mui/material";
 
 
 const Counter = ({ sumar, restar, contador, onAdd }) => {
     return (
 
-        <div>
-            <button onClick={restar}>Restar</button>
+        <div style={{ display: "flex" }}>
+            <Button onClick={restar}>Restar</Button>
             <h2>{contador}</h2>
-            <button onClick={sumar}>Sumar</button>
+            <Button onClick={sumar}>Sumar</Button>
 
-            <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
+            <Button onClick={() => onAdd(contador)}>Agregar al carrito</Button>
 
         </div>
     );

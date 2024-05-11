@@ -5,7 +5,10 @@
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import { products } from "../../../productsMock"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { CartContext } from "../../../context/CartContext"
+
+import Swal from "sweetalert2"
 
 
 
@@ -15,12 +18,18 @@ const ItemDetailContainer = () => {
 
 
     const [item, setItem] = useState({})
+    const { addToCart, getQuantityById } = useContext(CartContext)
+
+
+    let initial = getQuantityById(+id)
+
+
     useEffect(() => {
 
         let productEncontrado = products.find((product) => product.id === +id)
 
         //simulando una promise
-        const getProduct = new Promise((res, rej) => {
+        const getProduct = new Promise((res) => {
             res(productEncontrado)
         })
         getProduct.then((res) => setItem(res))
@@ -28,16 +37,26 @@ const ItemDetailContainer = () => {
     }, [id])
 
     const onAdd = (cantidad) => {
-        //agregar al carrito
-        // console.log(item)
-        // console.log(cantidad)
 
-        let objetoCompleto = { ...item, quantity: cantidad }
+        let product = { ...item, quantity: cantidad }
+
+        addToCart(product)
         //agregamos al carrito
-        console.log(objetoCompleto)
-    }
 
-    return <ItemDetail item={item} onAdd={onAdd} />;
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            iconColor: '#fff',
+            title: "Producto agregado al carro",
+            showConfirmButton: false,
+            timer: 1500,
+            background: '-webkit-radial-gradient(#560e86, #0a0011)',
+            color: "orange",
+        })
+
+    };
+
+    return <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
 }
 
 export default ItemDetailContainer

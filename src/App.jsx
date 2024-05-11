@@ -5,6 +5,8 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import CartContainer from "./components/pages/cart/CartContainer";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 import Checkout from "./components/pages/checkout/Checkout";
+import CartContextGlobal from "./context/CartContext";
+
 
 
 
@@ -12,28 +14,28 @@ import Checkout from "./components/pages/checkout/Checkout";
 
 function App() {
   return <BrowserRouter >
-    <Routes >
 
-      <Route element={<Layaut />} >
 
-        <Route path="/" element={<ItemListContainer />} />
+    <CartContextGlobal>
+      <Routes >
+        <Route element={<Layaut />} >
 
-        <Route path="/category/:category" element={<ItemListContainer />} />
-        {/* <Route path="/category/camioneta" element={<ItemListContainer />} />
+          <Route path="/" element={<ItemListContainer />} />
+
+          <Route path="/category/:category" element={<ItemListContainer />} />
+          {/* <Route path="/category/camioneta" element={<ItemListContainer />} />
         <Route path="/category/camiones" element={<ItemListContainer />} /> */}
 
 //con los :: y luego el ID trabajamos con un parametro dinamico .. navegando ah lo solicitado x el usuario
-        <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
 
-        <Route path="/cart" element={<CartContainer />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="*" element={<h3>Error 404</h3>} />
-
-      </Route>
+          <Route path="/cart" element={<CartContainer />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<h3>Error 404</h3>} />
+        </Route>
       //ruta principal
-
-
-    </Routes>
+      </Routes>
+    </CartContextGlobal>
 
 
   </BrowserRouter>

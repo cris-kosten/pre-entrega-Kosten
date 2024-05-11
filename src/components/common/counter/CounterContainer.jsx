@@ -5,15 +5,17 @@
 import { useState } from "react"
 import Counter from "./Counter"
 
-export const CounterContainer = ({ stock, inicial = 1, onAdd }) => {
+export const CounterContainer = ({ stock, initial = 1, onAdd }) => {
 
     // lo uso y lo ejecuto al hooks
-    const [contador, setContador] = useState(inicial);
+    const [contador, setContador] = useState(initial);
 
 
     const sumar = () => {
         if (contador < stock) {
-            setContador(contador + 1)
+            setContador(contador + 1);
+        } else {
+            alert("maximo en stock")
         }
     }
 
