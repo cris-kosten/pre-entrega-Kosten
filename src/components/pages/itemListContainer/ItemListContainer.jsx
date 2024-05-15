@@ -1,49 +1,40 @@
 import { useEffect, useState } from "react";
-import { products } from "../../../productsMock";
 import ItemList from "./ItemList";
-import { useParams, useNavigate } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 import { Skeleton } from "@mui/material";
 
-
-
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore"
 
 // creamos un componente
 const ItemListContainer = () => {
-
-    // const navigate = useNavigate() //devuelve una funcion -->{"/cart"}
-
     const { category } = useParams();
 
-
-    // name --> un string ---> truthy
-    // name --> undefined ---> falsy
     const [items, setItems] = useState([]);
     const [error, setError] = useState(null);
 
-    //simulando una peticion
+    //solicitamos la peticion al firebase
     useEffect(() => {
 
-        let productsFiltered = products.filter(
-            (product) =>
-                product.categoria === category)
+        const productsCollection = collection(db, "products");
+        let consulta = productsCollection;
+        if (category) {
+            consulta = query(productsCollection, where("categoria", "==", category));
+        }
+        getDocs(consulta).then((res) => {
+            let newArray = res.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() };
+            }); // []
+            setItems(newArray);
+        });
 
-        // las promesas se crean en el servidor
-        const getProducts = new Promise((resolve, reject) => {
-            let x = true;
-            if (x) {
-                setTimeout(() => {
-                    resolve(category ? productsFiltered : products);
-                }, 2500);
 
-            } else {
-                //reject : la condicion no se cunple/ rechaza la peticion
-                reject({ status: 400, message: "No estas autorizado" })
-            }
-
-        })
-        getProducts.then((res) => setItems(res)).catch((error) => setError(error));
     }, [category]);
+
+
+
+
+
 
 
     // 2da tecnica de renderizado 
