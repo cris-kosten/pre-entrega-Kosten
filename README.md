@@ -1,8 +1,26 @@
-# React + Vite
+# ![](public/vite.svg) Mi Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Esta es una web de ventas de Relojes
 
-Currently, two official plugins are available:
+![](https://res.cloudinary.com/djjorlsk5/image/upload/v1715972867/zarla-tiempo-es-oro-1x1-2400x2400-20220824-yxtqfrf3fhfktgqf6hkh_fnkv1h.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### las herramientas utilizadas son:
+
+- mui
+- sweetalert2
+- yup
+- formik
+- firebase
+
+```
+git clone  http/practicando
+```
+
+```javascript
+const name = "cristian";
+const alias = (chueco) => {
+  return name + alias;
+};
+```
+
+[canal de youtube recomendado para juniors en programacion](https://www.youtube.com/@soydalto)
