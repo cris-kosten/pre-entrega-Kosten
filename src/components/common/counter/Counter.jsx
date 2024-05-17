@@ -1,6 +1,4 @@
 import { Button } from "@mui/material";
-
-
 const Counter = ({ sumar, restar, contador, onAdd }) => {
     return (
 
@@ -14,6 +12,4 @@ const Counter = ({ sumar, restar, contador, onAdd }) => {
         </div>
     );
 };
-
-
 export default Counter;

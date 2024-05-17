@@ -49,8 +49,6 @@ const Checkout = () => {
         // limpiar el carrito despues de realizar la compra
         clearCart()
     };
-
-
     return (
         <div style={{ padding: "100px", }}>
 
@@ -80,5 +78,4 @@ const Checkout = () => {
         </div>
     )
 }
-
 export default Checkout

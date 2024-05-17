@@ -31,11 +31,9 @@ const Cart = ({ cart, clearCart, deleteById, total }) => {
         })
     }
 
-
     return (
         <div>
             <h1>Tus Pedidos</h1>
-
             {
                 cart.map(product =>
                     <div key={product.id} style={{ border: "2px solid red" }}>
@@ -46,23 +44,16 @@ const Cart = ({ cart, clearCart, deleteById, total }) => {
                     </div>)
             }
             <h3>Total a pagar es de: ${total}</h3>
-
-
             {
                 cart.length > 0 && <Button onClick={clartCartAlert} variant="outlined">Limpiar Carrito</Button>
             }
-
-
             {
                 cart.length > 0 ? <Link to="/checkout">
                     <Button variant="contained">FInalizar Compra</Button>
                 </Link> : (
                     <h2>Agrega productos a tu carrito de compras</h2>
                 )}
-
-
         </div>
     )
 }
-
 export default Cart

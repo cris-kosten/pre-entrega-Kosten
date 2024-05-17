@@ -11,7 +11,4 @@ export const CardResponsive = () => {
         </div>
     )
 }
-
-
-
 export default CardResponsive
