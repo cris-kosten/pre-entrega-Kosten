@@ -13,6 +13,8 @@ export const CheckoutFormik = () => {
             constraseña: "",
             confirmarContraseña: "",
         },
+
+
         onSubmit: (x) => {
             console.log(x)
         },

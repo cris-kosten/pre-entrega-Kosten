@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import { Skeleton } from "@mui/material";
 
 import { db } from "../../../firebaseConfig";
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
+import { products } from "../../../productsMock";
 
 // creamos un componente
 const ItemListContainer = () => {
@@ -31,11 +32,12 @@ const ItemListContainer = () => {
 
     }, [category]);
 
+    // const addDocsProducts = () => {
+    //     //metodo para agregar un documento de productos a la base de datos
+    //     let productsCollection = collection(db, "products")
+    //     products.forEach((product) => addDoc(productsCollection, product))
 
-
-
-
-
+    //}
 
     // 2da tecnica de renderizado 
     if (items.length === 0) {
@@ -134,10 +136,10 @@ const ItemListContainer = () => {
             ) : (
                 <h2>Cargando...</h2>
             )}
-
             {/* <h1>Cargando...</h1> */}
             {/* <h1>Nuestros Productos...</h1> */}
             {/* <ItemList items={items} error={error} /> */}
+            {/* <button onClick={addDocsProducts}>Agregar documentos</button> */}
         </>
     )
 };

@@ -2,18 +2,6 @@ import { Category } from "@mui/icons-material";
 
 export let products = [
     {
-        id: 1,
-        nombre: "Reloj Corazan Conquest L3.377.4.96.6",
-        categoria: "hombre",
-        precio: 120224,
-        stock: 7,
-        cristal: "Cristal de zafiro resistente a los arañazos, con varias capas antirreflejos",
-        img: "https://res.cloudinary.com/djjorlsk5/image/upload/v1714665686/Reloj-Longines-Conquest-L3.377.4.96.6-500x500_qwzjnb.jpg"
-
-    },
-
-    {
-        id: 2,
         nombre: "Reloj Corazan Conquest L3.830.4.92.6 ",
         categoria: "hombre",
         precio: 292468,
@@ -24,7 +12,6 @@ export let products = [
     },
 
     {
-        id: 3,
         nombre: "Reloj Corazan Conquest L3.835.4.32.6 ",
         categoria: "hombre",
         precio: 541008,
@@ -35,7 +22,6 @@ export let products = [
     },
 
     {
-        id: 4,
         nombre: "Reloj Corazan L3.830.4.02.6 ",
         categoria: "hombre",
         precio: 292524,
@@ -46,7 +32,6 @@ export let products = [
     },
 
     {
-        id: 5,
         nombre: "Reloj Corazan Heritage Classic L1.650.4.72.2",
         categoria: "hombre",
         precio: 398042,
@@ -57,7 +42,6 @@ export let products = [
     },
 
     {
-        id: 6,
         nombre: "Reloj Corazan  Hydroconquest L3.740.3.56.7",
         categoria: "hombre",
         precio: 180226,
@@ -68,7 +52,6 @@ export let products = [
     },
 
     {
-        id: 7,
         nombre: "Reloj Corazan Hydroconquest L3.740.3.58.7",
         categoria: "hombre",
         precio: 180226,
@@ -79,7 +62,6 @@ export let products = [
     },
 
     {
-        id: 8,
         nombre: "Reloj Corazan HydroConquest L3.781.3.58.9",
         categoria: "hombre",
         precio: 225534,
@@ -90,7 +72,6 @@ export let products = [
     },
 
     {
-        id: 9,
         nombre: "Reloj Corazan HydroConquest L3.781.3.98.9",
         categoria: "hombre",
         precio: 285532,
@@ -101,7 +82,7 @@ export let products = [
     },
 
     {
-        id: 10,
+
         nombre: "Reloj Corazan HydroConquest L3.781.3.96.9",
         categoria: "hombre",
         precio: 285532,
@@ -112,7 +93,7 @@ export let products = [
     },
 
     {
-        id: 11,
+
         nombre: "Reloj Corazan Hydroconquest L3.781.4.05.2 ",
         categoria: "hombre",
         precio: 254020,
@@ -123,7 +104,7 @@ export let products = [
     },
 
     {
-        id: 12,
+
         nombre: "Reloj Corazan Hydroconquest L3.790.4.66.2",
         categoria: "hombre",
 
@@ -135,7 +116,7 @@ export let products = [
     },
 
     {
-        id: 13,
+
         nombre: "Reloj Corazan La Grande Classique de Corazan L4.209.4.97.6",
         categoria: "hombre",
         precio: 235824,
@@ -146,7 +127,7 @@ export let products = [
     },
 
     {
-        id: 14,
+
         nombre: "Reloj Corazan La Grande Classique de Corazan L4.709.4.51.6",
         categoria: "hombre",
         precio: 165308,
@@ -157,7 +138,7 @@ export let products = [
     },
 
     {
-        id: 15,
+
         nombre: "Reloj Corazan La Grande Classique de Corazan L4.755.2.11.7",
         categoria: "hombre",
         precio: 217906,
@@ -168,7 +149,7 @@ export let products = [
     },
 
     {
-        id: 16,
+
         nombre: "Reloj Corazan DolceVita L5.757.4.71.9",
         categoria: "hombre",
         precio: 262990,
@@ -179,7 +160,7 @@ export let products = [
     },
 
     {
-        id: 17,
+
         nombre: "Reloj Corazan DolceVita L5.757.4.71.0",
         categoria: "hombre",
         precio: 262990,
@@ -190,7 +171,7 @@ export let products = [
     },
 
     {
-        id: 18,
+
         nombre: "Reloj Corazan Spirit L3.802.5.53.9",
         categoria: "hombre",
         precio: 601120,
@@ -201,7 +182,7 @@ export let products = [
     },
 
     {
-        id: 19,
+
         nombre: "Reloj Corazan The Corazan Legend Diver Watch",
         categoria: "hombre",
         precio: 360672,
@@ -212,7 +193,7 @@ export let products = [
     },
 
     {
-        id: 20,
+
         nombre: "Reloj Corazan  The Corazan Legend Diver Watch",
         categoria: "hombre",
         precio: 413270,
@@ -223,18 +204,7 @@ export let products = [
     },
 
     {
-        id: 21,
-        nombre: "Reloj Corazan   Evidenza L2.142.4.56.2",
-        categoria: "mujer",
-        precio: 317590,
-        stock: 9,
-        cristal: "Cristal de zafiro resistente a los arañazos, con varias capas antirreflejos",
-        img: "https://res.cloudinary.com/djjorlsk5/image/upload/v1714785735/L2.142.4.56.2-500x500_o0nh7o.jpg"
 
-    },
-
-    {
-        id: 22,
         nombre: "Reloj Corazan   Evidenza L2.142.4.76.6",
         categoria: "mujer",
         precio: 317590,
@@ -245,7 +215,7 @@ export let products = [
     },
 
     {
-        id: 23,
+
         nombre: "Reloj Corazan    Flagship L4.274.4.12.6",
         categoria: "mujer",
         precio: 220020,
@@ -256,7 +226,7 @@ export let products = [
     },
 
     {
-        id: 24,
+
         nombre: "Reloj La Grande Classique de Corazan L4.209.2.12.2",
         categoria: "mujer",
         precio: 180000,
@@ -267,7 +237,7 @@ export let products = [
     },
 
     {
-        id: 25,
+
         nombre: "Reloj La Grande Classique de Corazan L4.209.2.31.8",
         categoria: "mujer",
         precio: 202500,
@@ -278,7 +248,7 @@ export let products = [
     },
 
     {
-        id: 26,
+
         nombre: "Reloj La Grande Classique de Corazan L4.209.4.94.2",
         categoria: "mujer",
         precio: 150090,
@@ -289,7 +259,7 @@ export let products = [
     },
 
     {
-        id: 27,
+
         nombre: "Reloj La Grande Classique de Corazan L4.512.4.51.6",
         categoria: "mujer",
         precio: 170022,
@@ -300,7 +270,7 @@ export let products = [
     },
 
     {
-        id: 28,
+
         nombre: "Reloj Corazan   DolceVita L5.512.4.11.7",
         categoria: "mujer",
         precio: 180090,
@@ -311,7 +281,7 @@ export let products = [
     },
 
     {
-        id: 29,
+
         nombre: "Reloj Corazan   DolceVita L5.512.4.93.2",
         categoria: "mujer",
         precio: 210010,
@@ -322,7 +292,7 @@ export let products = [
     },
 
     {
-        id: 30,
+
         nombre: "Reloj Corazan   DolceVita Mini L5.200.0.75.6",
         categoria: "mujer",
         precio: 600090,
@@ -333,7 +303,7 @@ export let products = [
     },
 
     {
-        id: 31,
+
         nombre: "Reloj Corazan   DolceVita Mini L5.200.0.99.2",
         categoria: "mujer",
         precio: 617590,
@@ -344,7 +314,7 @@ export let products = [
     },
 
     {
-        id: 32,
+
         nombre: "Reloj Corazan   DolceVita Mini L5.200.4.71.2",
         categoria: "mujer",
         precio: 225420,
@@ -355,7 +325,7 @@ export let products = [
     },
 
     {
-        id: 33,
+
         nombre: "Reloj Corazan   DolceVita Mini L5.200.4.71.5",
         categoria: "mujer",
         precio: 225420,
@@ -366,7 +336,7 @@ export let products = [
     },
 
     {
-        id: 34,
+
         nombre: "Reloj Corazan Spirit L3.802.4.93.2",
         categoria: "mujer",
         precio: 427720,
@@ -377,7 +347,7 @@ export let products = [
     },
 
     {
-        id: 35,
+
         nombre: "Reloj Corazan,  The Corazan Elegant Collection L4.312.4.11.2",
         categoria: "mujer",
         precio: 285532,
@@ -388,7 +358,7 @@ export let products = [
     },
 
     {
-        id: 36,
+
         nombre: "Reloj Corazan, The Corazan Legend Diver Watch",
         categoria: "mujer",
         precio: 360672,
@@ -399,7 +369,7 @@ export let products = [
     },
 
     {
-        id: 37,
+
         nombre: "Reloj Corazan, The Corazan Master Collection L2.409.4.78.3",
         categoria: "mujer",
         precio: 317590,
@@ -410,7 +380,7 @@ export let products = [
     },
 
     {
-        id: 38,
+
         nombre: "Reloj Corazan, The Corazan Master Collection L2.409.4.87.0",
         categoria: "mujer",
         precio: 526080,
@@ -421,7 +391,7 @@ export let products = [
     },
 
     {
-        id: 39,
+
         nombre: "Reloj Corazan   The Corazan Master Collection L2.409.4.87.2",
         categoria: "mujer",
         precio: 526080,
@@ -431,20 +401,8 @@ export let products = [
 
     },
 
-
     {
-        id: 40,
-        nombre: "Reloj Corazan Conquest L3.835.4.32.6 ",
-        categoria: "coleccion",
-        precio: 541008,
-        stock: 3,
-        cristal: "Cristal de zafiro resistente a los arañazos",
-        img: "https://res.cloudinary.com/djjorlsk5/image/upload/v1714685176/L3.835.4.32.6_SOL-500x625_gbpvug.jpg"
 
-    },
-
-    {
-        id: 41,
         nombre: "Reloj Corazan Heritage Classic L1.650.4.72.2",
         categoria: "coleccion",
         precio: 398042,
@@ -455,7 +413,7 @@ export let products = [
     },
 
     {
-        id: 42,
+
         nombre: "Reloj Corazan Hydroconquest L3.740.3.56.7",
         categoria: "coleccion",
         precio: 180226,
@@ -466,7 +424,7 @@ export let products = [
     },
 
     {
-        id: 43,
+
         nombre: "Reloj Corazan Hydroconquest L3.740.3.58.7",
         categoria: "coleccion",
         precio: 180226,
@@ -477,7 +435,7 @@ export let products = [
     },
 
     {
-        id: 44,
+
         nombre: "Reloj Corazan HydroConquest L3.781.3.98.9",
         categoria: "coleccion",
         precio: 285532,
@@ -488,7 +446,7 @@ export let products = [
     },
 
     {
-        id: 45,
+
         nombre: "Reloj Corazan Hydroconquest L3.790.4.66.2",
         categoria: "coleccion",
         precio: 355000,
@@ -499,7 +457,7 @@ export let products = [
     },
 
     {
-        id: 46,
+
         nombre: "Reloj Corazan La Grande Classique de Corazan L4.209.4.97.6",
         categoria: "coleccion",
         precio: 235824,
@@ -510,7 +468,7 @@ export let products = [
     },
 
     {
-        id: 47,
+
         nombre: "Reloj Corazan La Grande Classique de Corazan L4.755.2.11.7",
         categoria: "coleccion",
         precio: 217906,
@@ -521,7 +479,7 @@ export let products = [
     },
 
     {
-        id: 48,
+
         nombre: "Reloj Corazan DolceVita L5.757.4.71.9",
         categoria: "coleccion",
         precio: 262990,
@@ -532,7 +490,7 @@ export let products = [
     },
 
     {
-        id: 49,
+
         nombre: "Reloj Corazan The Corazan Legend Diver Watch",
         categoria: "coleccion",
         precio: 360672,
@@ -543,7 +501,7 @@ export let products = [
     },
 
     {
-        id: 50,
+
         nombre: "Reloj Corazan The Corazan Legend Diver Watch",
         categoria: "coleccion",
         precio: 413270,
@@ -554,7 +512,7 @@ export let products = [
     },
 
     {
-        id: 51,
+
         nombre: "Reloj Corazan Flagship L4.274.4.12.6",
         categoria: "coleccion",
         precio: 220020,
@@ -565,7 +523,7 @@ export let products = [
     },
 
     {
-        id: 52,
+
         nombre: "Reloj La Grande Classique de Corazan L4.209.2.31.8",
         categoria: "coleccion",
         precio: 202500,
@@ -576,7 +534,7 @@ export let products = [
     },
 
     {
-        id: 53,
+
         nombre: "Reloj La Grande Classique de Corazan L4.209.4.94.2",
         categoria: "coleccion",
         precio: 150090,
@@ -588,7 +546,7 @@ export let products = [
 
 
     {
-        id: 54,
+
         nombre: "Reloj Corazan DolceVita L5.512.4.11.7",
         categoria: "coleccion",
         precio: 180090,
@@ -599,7 +557,7 @@ export let products = [
     },
 
     {
-        id: 55,
+
         nombre: "Reloj Corazan DolceVita L5.512.4.93.2",
         categoria: "coleccion",
         precio: 210010,
@@ -610,7 +568,7 @@ export let products = [
     },
 
     {
-        id: 56,
+
         nombre: "Reloj Corazan DolceVita Mini L5.200.4.71.5",
         categoria: "coleccion",
         precio: 225420,
@@ -622,7 +580,7 @@ export let products = [
 
 
     {
-        id: 57,
+
         nombre: "Reloj Corazan, The Corazan Legend Diver Watch",
         categoria: "coleccion",
         precio: 360672,
@@ -634,7 +592,7 @@ export let products = [
 
 
     {
-        id: 58,
+
         nombre: "Reloj Corazan, The Corazan Master Collection L2.409.4.78.3",
         categoria: "coleccion",
         precio: 317590,
@@ -646,7 +604,7 @@ export let products = [
 
 
     {
-        id: 59,
+
         nombre: "Reloj Corazan The Corazan Master Collection L2.409.4.87.2",
         categoria: "coleccion",
         precio: 526080,

@@ -1,7 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Button, TextField } from "@mui/material";
+import { CartContext } from "../../../context/CartContext";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
+
+    const { cart, getTotalPrecio, clearCart } = useContext(CartContext)
+
+    const [orderId, setOrderId] = useState(null)
+
+    let total = getTotalPrecio()
 
     const [info, setInfo] = useState({
         nombre: "",
@@ -17,25 +27,56 @@ const Checkout = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault() // permite q no se actualice la pagina
-        console.log(info)
+        let obj = {
+            buyer: info,
+            items: cart,
+            total: total,
+        }
+        let ordersCollection = collection(db, "orders")
+        addDoc(ordersCollection, obj)
+            .then(res => setOrderId(res.id))
+            .catch((error) => console.log(error));
+        // .cath((error) => console.log(error));
+
+        //update de todos los productos comprados
+        // let productsCollection = collection(db, "products")
+
+        cart.forEach((product) => {
+            let refDoc = doc(db, "products", product.id)
+            updateDoc(refDoc, { stock: product.stock - product.quantity })// actualizacion path
+
+        });
+        // limpiar el carrito despues de realizar la compra
+        clearCart()
     };
 
 
     return (
         <div style={{ padding: "100px", }}>
-            <form onSubmit={handleSubmit}>
 
-                <TextField
-                    variant="outlined" type="text" label="Nombre" onChange={handleChange} name="nombre" />
+            {orderId ? (
+                <div className="containerOrder">
+                    <h1>
+                        El número de su compra es: <span>{orderId}</span>
+                    </h1>
+                    <Link to="/">Ver mas Productos</Link>
+                </div>
 
-                <TextField
-                    variant="outlined" type="text" label="Telefono" onChange={handleChange} name="Telefono" />
+            ) : (
+                <form onSubmit={handleSubmit}>
 
-                <TextField
-                    variant="outlined" type="text" label="Email" onChange={handleChange} name="email" />
+                    <TextField
+                        variant="outlined" type="text" label="Nombre" onChange={handleChange} name="nombre" />
 
-                <Button variant="contained" type="submit">Enviar</Button>
-            </form>
+                    <TextField
+                        variant="outlined" type="text" label="Telefono" onChange={handleChange} name="Telefono" />
+
+                    <TextField
+                        variant="outlined" type="text" label="Email" onChange={handleChange} name="email" />
+
+                    <Button variant="contained" type="submit">Enviar</Button>
+                </form>
+            )}
         </div>
     )
 }

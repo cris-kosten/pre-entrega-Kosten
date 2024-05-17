@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 
 import { getFirestore } from "firebase/firestore"
 
-
+// para proteger la informacion importamos el .env
 const firebaseConfig = {
-    apiKey: "AIzaSyCOtqCae79R9yf4Ivykxx4btOteYLqbAqQ",
-    authDomain: "proyecto-react-relojes.firebaseapp.com",
-    projectId: "proyecto-react-relojes",
-    storageBucket: "proyecto-react-relojes.appspot.com",
-    messagingSenderId: "939094573933",
-    appId: "1:939094573933:web:8a37e21d93ece6e7cdd064"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTH,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAG,
+    messagingSenderId: import.meta.env.VITE__MESSAGIND_SENDER,
+    appId: import.meta.env.VITE_APP_ID,
 };
 
 

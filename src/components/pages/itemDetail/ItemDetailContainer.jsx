@@ -4,11 +4,11 @@
 
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
-import { products } from "../../../productsMock"
 import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../../context/CartContext"
-
 import Swal from "sweetalert2"
+import { db } from "../../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore"
 
 
 
@@ -23,16 +23,14 @@ const ItemDetailContainer = () => {
 
     let initial = getQuantityById(+id)
 
-
+    // accedemos a un producto especifico con su informacion
     useEffect(() => {
 
-        let productEncontrado = products.find((product) => product.id === +id)
-
-        //simulando una promise
-        const getProduct = new Promise((res) => {
-            res(productEncontrado)
-        })
-        getProduct.then((res) => setItem(res))
+        let productsCollection = collection(db, "products")
+        let refDoc = doc(productsCollection, id)
+        getDoc(refDoc).then(res => {
+            setItem({ id: res.id, ...res.data() })
+        });
 
     }, [id])
 
